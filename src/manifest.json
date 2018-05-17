@@ -1,0 +1,33 @@
+{
+  "homepage_url": "http://melchizedekmashiku.com/James.ai",
+  "manifest_version": 2,
+  "icons": { "128": "images/ic_launcher.png" },
+  "browser_action": {
+    "default_icon": "images/ic_launcher.png",
+    "default_popup": "html/popup.html"
+  },
+  "background": { "scripts": ["js/background.js"] },
+  "content_scripts": [{
+    "matches": ["https://www.youtube.com/*", "https://www.khanacademy.org/*", "https://keep.google.com/u/0/#LIST/*"],
+    "css": ["css/material.css", "css/James.css"],
+    "js": ["js/content.js" ],
+    "run_at": "document_end",
+      "all_frames": true
+  }],
+  "options_page": "html/options.html",
+  "devtools_page": "html/devtools.html",
+  "permissions": [ "<all_urls>", 
+    "*://*.youtube.com/",
+    "*://*.khanacademy.org/",
+    "*://video.google.com/",
+    "background",
+    "activeTab",
+    "storage",
+    "tabs",
+    "tts"],
+  "web_accessible_resources": [ "js/*", "html/*", "css/*", "images/*" ],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "name": "JAMES.ai",
+  "version": "<%= package.version %>",
+  "description": "<%= package.description %>"
+}
