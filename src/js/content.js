@@ -28,6 +28,11 @@ mdl.defer;
 componentHandler.upgradeElement(mdl);
 document.getElementsByTagName("body")[0].appendChild(mdl);
 
+var mdl_icon = document.createElement("SCRIPT");
+mdl_icon.src ="https://fonts.googleapis.com/icon?family=Material+Icons";
+componentHandler.upgradeElement(mdl_icon);
+document.getElementsByTagName("body")[0].appendChild(mdl_icon);
+
 var nlp_compromise = document.createElement("SCRIPT");
 nlp_compromise.src = "https://unpkg.com/compromise@latest/builds/compromise.es6.min.js";
 componentHandler.upgradeElement(nlp_compromise);
@@ -37,8 +42,11 @@ var div = document.createElement('div');
 div.id = "James";
 componentHandler.upgradeElement(div);
 var button = document.createElement('button');
-var textNode = document.createTextNode('+');
-button.appendChild(textNode);
+var icon = document.createElement("I");
+icon.className = "material-icons";
+icon.innerHTML ="microphone";
+componentHandler.upgradeElement(icon);
+button.appendChild(icon);
 button.id = "James.btn";
 button.className = 'mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--red-A700';
 componentHandler.upgradeElement(button);
