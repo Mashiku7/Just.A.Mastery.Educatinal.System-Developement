@@ -147,50 +147,5 @@ class JAMES{
                 console.log("JAMES answered the question and updated the DOM");
             }
 
-    static CreateJAMES_UI(){
-        //From Content Script; for injecting the UI into pages.
-        var mdl = document.createElement("SCRIPT");
-        mdl.src ="https://code.getmdl.io/1.3.0/material.min.js";
-        mdl.defer;
-        componentHandler.upgradeElement(mdl);
-        document.getElementsByTagName("body")[0].appendChild(mdl);
-
-        var mdl_icon = document.createElement("SCRIPT");
-        mdl_icon.src ="https://fonts.googleapis.com/icon?family=Material+Icons";
-        componentHandler.upgradeElement(mdl_icon);
-        document.getElementsByTagName("body")[0].appendChild(mdl_icon);
-
-        var nlp_compromise = document.createElement("SCRIPT");
-        nlp_compromise.src = "https://unpkg.com/compromise@latest/builds/compromise.es6.min.js";
-        componentHandler.upgradeElement(nlp_compromise);
-        document.getElementsByTagName("body")[0].appendChild(nlp_compromise);
-
-        var div = document.createElement('div');
-        div.id = "James";
-        componentHandler.upgradeElement(div);
-        var button = document.createElement('button');
-        var icon = document.createElement("I");
-        icon.className = "material-icons";
-        icon.innerHTML ="microphone";
-        componentHandler.upgradeElement(icon);
-        button.appendChild(icon);
-        button.id = "James.btn";
-        button.className = 'mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--red-A700';
-        componentHandler.upgradeElement(button);
-        div.appendChild(button);
-        componentHandler.upgradeElement(div);
-        document.getElementsByTagName("body")[0].appendChild(div);
-
-        ///////////////////////////////////////////////////////////
-        let configs ={
-            API_KEY: "",
-            questionasked: false
-        }
-        const James = new JAMES(configs);
-
-        document.getElementById("James.btn").onclick = JAMES.startButton;
-
-        ///////////////////////////////////////////////////////////
-    }
 }
 export { JAMES as default};
