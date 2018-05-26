@@ -8,7 +8,7 @@
   },
   "background": { "scripts": ["js/background.js"] },
   "content_scripts": [{
-    "matches": ["https://www.youtube.com/*", "https://docs.google.com/*", "https://keep.google.com/*"],
+    "matches": ["https://www.youtube.com/*", "https://docs.google.com/*"],
     "css": ["css/material.css", "css/James.css"],
     "js": ["js/content.js" ],
     "run_at": "document_end",
