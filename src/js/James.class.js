@@ -4,7 +4,7 @@
  *
  * Copyright (c) 2017 Melchizedek Mashiku, Michael Bowler
  * Released under the MIT license
- * Dependencies: Jquery, Ajax, nlp-compromise, Google Speech Recognition
+ * Dependencies: Jquery, Ajax, nlp-compromise, Google Speech Recognition, TensorflowJS, 
  * <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
  * <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
  * 
@@ -75,7 +75,11 @@ class JAMES{
         var resulturl;
         var urlRegexSubStr = "https://www.youtube.com/watch?v=";
         var urlRegexSubStr2 = "https://www.youtube.com/embed/";
+        var urlRegexSubStr3 = "https://www.youtube-nocookie.com/embed/";
         if((document.location.href).indexOf(urlRegexSubStr) !== -1){
+            console.log("Youtube link:"+document.location.href+" ready for IRIS processing"); 
+            resulturl = document.location.href;
+        }else if((document.location.href).indexOf(urlRegexSubStr3) !== -1){
             console.log("Youtube link:"+document.location.href+" ready for IRIS processing"); 
             resulturl = document.location.href;
         }else{
@@ -120,9 +124,15 @@ class JAMES{
                 this.videoId = JAMES.GetYouTubeID(JAMES.GetYouTubeLink());
                 var url = JAMES.GetYouTubeLink();
                 var urlRegexSubStr2 = "https://www.youtube.com/embed/";
+                var urlRegexSubStr3 = "https://www.youtube-nocookie.com/embed/";
                 var resulturl ="";
                 if(url.indexOf(urlRegexSubStr2) !== -1){
                     resulturl = "https://www.youtube.com/embed/"+ this.videoId +"/?controls=1&enablejsapi=1&modestbranding=1&showinfo=0&origin=https%3A%2F%2Fwww.khanacademy.org&iv_load_policy=3&html5=1&autoplay=1&fs=1&rel=0&hl=en&cc_lang_pref=en&cc_load_policy=1&start="+Math.trunc(timeresult);
+                    console.log(resulturl);
+                    console.log("Ready to dynamic load embeded youtube video");
+                    callback(resulturl);
+                }else if(url.indexOf(urlRegexSubStr3) !== -1){
+                    resulturl = "https://www.youtube-nocookie.com/embed/"+ this.videoId +"/?controls=1&enablejsapi=1&modestbranding=1&showinfo=0&origin=https%3A%2F%2Fwww.khanacademy.org&iv_load_policy=3&html5=1&autoplay=1&fs=1&rel=0&hl=en&cc_lang_pref=en&cc_load_policy=1&start="+Math.trunc(timeresult);
                     console.log(resulturl);
                     console.log("Ready to dynamic load embeded youtube video");
                     callback(resulturl);

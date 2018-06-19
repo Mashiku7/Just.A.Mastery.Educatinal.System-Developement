@@ -54,6 +54,7 @@ div.appendChild(button);
 componentHandler.upgradeElement(div);
 document.getElementsByTagName("body")[0].appendChild(div);
 
+
 ///////////////////////////////////////////////////////////
 let configs ={
     API_KEY: "",
@@ -272,7 +273,7 @@ $(document).ready(function() {
         var JamesGDK_UI = '<div class="mnyt-controls">\
                             <div class="resizer" id="mnyt-br"></div>\
                             <iframe width="420" height="315" src=https://www.youtube.com/embed/'+ 
-                            gdkinput +'?autoplay=1"></iframe>\
+                            gdkinput +'?autoplay=1" allow="microphone"></iframe>\
                             <button class="mnyt-size-button" id="mnyt-close-button">X</button>\
                             </div>';
          
