@@ -1,7 +1,7 @@
 {
   "name": "james",
   "version": "0.0.7",
-  "description": "JAMES.ai is a educational personal assistant that allows you to ask questions and interact with youtube videos.",
+  "description": "JAMES.ai is an educational personal assistant that allows you to ask questions and interact with youtube videos.",
   "engines": {
     "node": "7.0.0",
     "npm": "3.10.8"
