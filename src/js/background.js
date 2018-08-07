@@ -1,6 +1,5 @@
 import handlers from './modules/handlers';
 import msg from './modules/msg';
-//import * as JAMES from '/modules/JamesLib.js';
 
 // here we use SHARED message handlers, so all the contexts support the same
 // commands. in background, we extend the handlers with two special
@@ -16,27 +15,11 @@ import msg from './modules/msg';
 
 console.log('BACKGROUND SCRIPT WORKS!'); // eslint-disable-line no-console
 
-// adding special background notification handlers onConnect / onDisconnect
-function logEvent(ev, context, tabId) {
-  console.log(`${ev}: context = ${context}, tabId = ${tabId}`); // eslint-disable-line no-console
-}
-handlers.onConnect = logEvent.bind(null, 'onConnect');
-handlers.onDisconnect = logEvent.bind(null, 'onDisconnect');
-const message = msg.init('bg', handlers.create('bg'));
-
-// issue `echo` command in 10 seconds after invoked,
-// schedule next run in 5 minutes
-function helloWorld() {
-  console.log('===== will broadcast "James is Awake!" in 10 seconds'); // eslint-disable-line no-console
-  setTimeout(() => {
-    console.log('>>>>> broadcasting "hello world!" now'); // eslint-disable-line no-console
-    message.bcast('echo', 'hello world!', () =>
-      console.log('<<<<< broadcasting done') // eslint-disable-line no-console
-    );
-  }, 10 * 1000);
-  setTimeout(helloWorld, 5 * 60 * 1000);
-}
-
-// start broadcasting loop
-helloWorld();
+// // adding special background notification handlers onConnect / onDisconnect
+// function logEvent(ev, context, tabId) {
+//   console.log(`${ev}: context = ${context}, tabId = ${tabId}`); // eslint-disable-line no-console
+// }
+// handlers.onConnect = logEvent.bind(null, 'onConnect');
+// handlers.onDisconnect = logEvent.bind(null, 'onDisconnect');
+// const message = msg.init('bg', handlers.create('bg'));
 

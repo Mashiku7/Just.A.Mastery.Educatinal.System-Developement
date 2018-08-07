@@ -54,6 +54,9 @@ div.appendChild(button);
 componentHandler.upgradeElement(div);
 document.getElementsByTagName("body")[0].appendChild(div);
 
+////////////////////////////////////////////////////////////
+
+//Handle Iframe allow="microphone" for khan academy
 
 ///////////////////////////////////////////////////////////
 let configs ={
@@ -113,7 +116,7 @@ if( checkLink !== -1){
 function gdk_miniyoutube(gdkinput){
 $(document).ready(function() {
     // Handle dragging.
-    
+
     var originalHeight;
     var originalWidth;
     var miniScreenLastTop;

@@ -161,8 +161,8 @@ methods to find the answers using the JAMES class methods.
 Create A JAMES Library that contains all the methods needed to run james on any third party application or framework like google drive. the library will then allow me to develop future guis with the same functionalities needed.
 
 ##Future feature to impliment in the library
-Give JAMES google keep extentsion ability to show medium articles with explanations to hard concepts. 
+Give JAMES Google Doc extentsion ability to show medium articles with explanations to hard concepts. 
 
 ## Developers Notes 
 Notes of my though process and steps toward creating J.A.M.E.S
-1. Finish J.A.M.E.S Library
+1. Finish J.A.M.E.S Library and Implement on Google Drive
