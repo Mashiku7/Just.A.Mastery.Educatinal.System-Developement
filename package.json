@@ -1,7 +1,7 @@
 {
   "name": "james",
   "version": "0.0.7",
-  "description": "Just A Mastery Educational System (J.A.M.E.S) is an academic personal assistant, this chrome extension has interactive and responsive video, learning and organizational tools; allowing you to ask questions about youtube videos, recieve an answers and other inforamtion to help you understand and take the steps toward mastery of a concept!",
+  "description": "Just A Mastery Educational System (J.A.M.E.S) is a educational personal assistant, this chrome extension creates an interactive and responsive video, learning and organizational tool; allowing you to ask questions and interact with youtube videos to help you understand and take the steps toward mastery.",
   "engines": {
     "node": "7.0.0",
     "npm": "3.10.8"
