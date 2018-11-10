@@ -156,6 +156,21 @@ class JAMES{
                 ///////////////////////////////////////////////////////////////////
                 console.log("JAMES answered the question and updated the DOM");
             }
+    //4. This is client side ml funtion to use the ariadne model inorder to create a content map and form the homeostatis/dream state active learning interactive video.
+            static JAMESclientsideModel(){
+                //This will require handler functions for the data processing e.g the playlist caption agrigator and the google cloud platform ml model processings.
+                //This model is going to use tensorfolwJS to use the Ariadne studio model
+                //The model has to initally take in the user video url then cread a data stream of appropriate data formats(video/playlist)
+                //JAMES_preprocessing model(functions) creates the DMN map of the transctipt data with jquery, pupetter and google cloud vision and distance matrix points of all nouns
+                // With the preprocess outputs use the labels to create proper homeostasis and junction communication points maybe after each sentence or a few contexts before the noun points(find natural stoping points)
+                //Adriadne creates the James file that will go into ariadne video viewer.
+                    //create my own video viewer/player
+                //The Ariadne model will require conversation maps of the entire subject field, punctiation for natural pauses and methods to take in user feedback for video continuation
+                //Create a James file format or container that is generated after video preprocessing and this makes the whole video interactive and when it is on the user clientside it 
+                    //trains and better understands the user and will help the user more effectively. essentially every video or playlist that has been prepocessed doesnt have to be preprocessed
+                    //all the time allowing for multcase continuos learned behavior custom to the user
+                //  James can be a website, with api for the function or search engine plug in for interactive media. True agumentation.
+            }
 
 }
 export { JAMES as default};
